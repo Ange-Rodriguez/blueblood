@@ -31,6 +31,7 @@ class ping_of_death:
         self.mac_addr = self.argv[2]
     
         self.threads_list = [None] * self.threads
+        self.run_threads()
       
 if __name__ == '__main__':
     ping_of_death = ping_of_death()
